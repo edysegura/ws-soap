@@ -27,5 +27,6 @@ target/
 /.nb-gradle/
 build/
 
-### VS Code ###
-.vscode/
+### Generated Code ###
+src/main/java/META-INF/sun-jaxb.episode
+src/main/java/br/edu/springboot/soapclient/correios/*.java
