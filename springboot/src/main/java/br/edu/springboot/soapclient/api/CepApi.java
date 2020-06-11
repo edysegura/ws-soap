@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.springboot.soapclient.adapter.CorreiosServiceAdapter;
+import br.edu.springboot.soapclient.config.Constants;
 import br.edu.springboot.soapclient.correios.ConsultaCEP;
 import br.edu.springboot.soapclient.correios.ConsultaCEPResponse;
 import br.edu.springboot.soapclient.correios.EnderecoERP;
@@ -24,9 +25,8 @@ public class CepApi {
     ObjectFactory objectFactory = new ObjectFactory();
     ConsultaCEP consultaCEP = new ConsultaCEP();
     consultaCEP.setCep(cep);
-    ConsultaCEPResponse response = correiosServiceAdapter.getAddressByCep(
-        "https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente",
-        objectFactory.createConsultaCEP(consultaCEP));
+    ConsultaCEPResponse response = correiosServiceAdapter
+      .getAddressByCep(Constants.CORREIOS_URL, objectFactory.createConsultaCEP(consultaCEP));
     return response.getReturn();
   }
 

@@ -8,8 +8,9 @@ import br.edu.springboot.soapclient.correios.ConsultaCEPResponse;
 
 public class CorreiosServiceAdapter extends WebServiceGatewaySupport {
 
+  @SuppressWarnings("unchecked")
   public ConsultaCEPResponse getAddressByCep(String url, Object request) {
-    JAXBElement response = (JAXBElement) getWebServiceTemplate()
+    JAXBElement<Object> response = (JAXBElement<Object>) getWebServiceTemplate()
       .marshalSendAndReceive(url, request);
     return (ConsultaCEPResponse) response.getValue();
   }
