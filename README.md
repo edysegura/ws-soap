@@ -2,6 +2,20 @@
 
 This repo is to demonstrate on how to connect to SOAP client web services
 
+## Instructions
+
+### Spring Boot version
+
+```
+docker run -p 8080:8080 edysegura/springboot-cep
+```
+
+then
+
+```
+http://localhost:8080/v1/cep/3754000
+```
+
 ## References
 
 Please find below the references used on these examples
