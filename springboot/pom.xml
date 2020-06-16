@@ -8,9 +8,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.edu.springboot</groupId>
-	<artifactId>soapclient</artifactId>
+	<artifactId>cep-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<name>CEP REST</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
