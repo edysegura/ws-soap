@@ -16,6 +16,12 @@ then
 http://localhost:8080/v1/cep/3754000
 ```
 
+### Generate a new Docker image
+
+```
+./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=edysegura/springboot-cep
+```
+
 ## References
 
 Please find below the references used on these examples
