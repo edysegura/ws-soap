@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "node ./cep.js"
+    "start": "node ./server.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "soap": "^0.31.0"
   }
 }
