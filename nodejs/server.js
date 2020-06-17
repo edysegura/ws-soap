@@ -3,15 +3,23 @@
 const express = require('express');
 const getAddressInfo = require('./cep');
 
-// Constants
-const PORT = 8080;
+const PORT = 3333;
 const HOST = 'localhost';
-
-// App
 const app = express();
-app.get('/v1/cep', async (req, res) => {
-  res.json(await getAddressInfo());
+
+app.get('/', async (request, response) => {
+  response.send(`
+    <a href="http://${HOST}:${PORT}/v1/cep/37540000">
+      http://${HOST}:${PORT}/v1/cep/37540000
+    </a>
+  `);
 });
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.get('/v1/cep/:cep', async (request, response) => {
+  const cep = request.params.cep;
+  response.json(await getAddressInfo(cep));
+});
+
+app.listen(PORT, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
+});
