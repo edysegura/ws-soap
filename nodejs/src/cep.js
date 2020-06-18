@@ -1,4 +1,4 @@
-const soap = require('soap');
+import soap from 'soap';
 
 const url = 'https://apphom.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl';
 
@@ -9,4 +9,4 @@ async function getAddressInfo (cep = '37540000') {
   return result;
 };
 
-module.exports = getAddressInfo;
+export default getAddressInfo;
