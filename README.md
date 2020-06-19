@@ -22,6 +22,24 @@ http://localhost:8080/v1/cep/3754000
 ./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=edysegura/springboot-cep
 ```
 
+### Node.js version
+
+```
+docker run -p 3000:3000 edysegura/nodejs-cep
+```
+
+then
+
+```
+http://localhost:3000/v1/cep/3754000
+```
+
+### Generate a new Docker image
+
+```
+docker build -t edysegura/nodejs-cep
+```
+
 ## References
 
 Please find below the references used on these examples
@@ -37,3 +55,4 @@ Please find below the references used on these examples
 - [SOAP WebService through extension](https://medium.com/@markos12/consumindo-o-webservice-dos-correios-soap-via-extens%C3%A3o-do-1b087bf290fb)
 - [Node.js how to consume SOAP XML web service](https://stackoverflow.com/a/45929815/1634092)
 - [A SOAP client and server for Node.js](https://github.com/vpulim/node-soap)
+- [Dockerizing a Node.js web app](https://nodejs.org/fr/docs/guides/nodejs-docker-webapp/)
