@@ -3,7 +3,7 @@ import cors from 'cors';
 
 import getAddressInfo from './cep.js';
 
-const PORT = 3333;
+const PORT = 3000;
 const HOST = 'localhost';
 
 const app = express();
